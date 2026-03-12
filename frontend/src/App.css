@@ -1,0 +1,143 @@
+/* Custom styles for the Cron Collaboration Dashboard */
+
+.custom-timeline .p-timeline-event-connector {
+  background-color: #e5e7eb;
+}
+
+.custom-timeline .p-timeline-event-marker {
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Status badge styling */
+.p-badge.p-component {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+}
+
+/* Card hover effects */
+.p-card {
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.p-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-color: #d1d5db;
+}
+
+/* Progress bar styling */
+.p-progressbar .p-progressbar-value {
+  background: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+/* Button styling */
+.p-button {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.p-button:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%);
+  transform: translateY(-1px);
+}
+
+/* Input styling */
+.p-inputtextarea {
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  transition: border-color 0.3s ease;
+}
+
+.p-inputtextarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Dropdown styling */
+.p-dropdown {
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+/* Panel styling */
+.p-panel .p-panel-header {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.p-panel .p-panel-content {
+  padding: 1.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .lg\\:col-span-2 {
+    grid-column: span 1;
+  }
+}
+
+/* Dark theme adjustments */
+.p-component {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Activity feed styling */
+.activity-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  background: #f9fafb;
+  border-left: 3px solid #3b82f6;
+}
+
+.activity-item.success {
+  border-left-color: #10b981;
+}
+
+.activity-item.warning {
+  border-left-color: #f59e0b;
+}
+
+.activity-item.error {
+  border-left-color: #ef4444;
+}
+
+/* Suggestion status indicators */
+.suggestion-status.pending {
+  color: #3b82f6;
+}
+
+.suggestion-status.implementing {
+  color: #f59e0b;
+}
+
+.suggestion-status.complete {
+  color: #10b981;
+}
+
+/* Loading animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.loading-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
