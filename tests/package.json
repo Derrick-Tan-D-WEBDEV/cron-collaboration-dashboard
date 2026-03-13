@@ -1,0 +1,68 @@
+{
+  "name": "cron-dashboard-tests",
+  "version": "3.0.0",
+  "description": "Comprehensive testing suite for Cron Collaboration Dashboard",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:api": "jest --testMatch=\"**/api/**/*.test.js\"",
+    "test:frontend": "jest --testMatch=\"**/frontend/**/*.test.js\"",
+    "test:integration": "jest --testMatch=\"**/integration/**/*.test.js\"",
+    "test:performance": "k6 run performance/*.js",
+    "test:security": "npm audit && semgrep scan",
+    "lint": "eslint . --ext .js,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.ts,.tsx --fix"
+  },
+  "dependencies": {
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/jest-dom": "^6.1.5",
+    "@testing-library/user-event": "^14.5.1",
+    "@playwright/test": "^1.40.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "supertest": "^6.3.3",
+    "k6": "^0.47.0",
+    "axios": "^1.6.2",
+    "websocket": "^1.0.34",
+    "uuid": "^9.0.1",
+    "faker": "^6.6.6",
+    "@faker-js/faker": "^8.3.1",
+    "semgrep": "^1.45.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.8",
+    "@types/supertest": "^2.0.16",
+    "eslint": "^8.55.0",
+    "typescript": "^5.3.3"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": ["<rootDir>/setup/jest.setup.js"],
+    "testMatch": [
+      "**/__tests__/**/*.(js|jsx|ts|tsx)",
+      "**/*.(test|spec).(js|jsx|ts|tsx)"
+    ],
+    "collectCoverageFrom": [
+      "**/*.{js,jsx,ts,tsx}",
+      "!**/*.d.ts",
+      "!**/node_modules/**",
+      "!**/coverage/**",
+      "!**/dist/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "moduleNameMapping": {
+      "^@/(.*)$": "<rootDir>/../frontend/src/$1",
+      "^@backend/(.*)$": "<rootDir>/../backend/src/$1"
+    }
+  }
+}

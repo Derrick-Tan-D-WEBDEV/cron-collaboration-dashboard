@@ -1,0 +1,80 @@
+{
+  "name": "cron-collaboration-dashboard",
+  "version": "3.0.0",
+  "description": "Enterprise cron job collaboration dashboard with advanced analytics and predictive intelligence",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\" \"npm run dev:analytics\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev", 
+    "dev:analytics": "cd analytics && python -m uvicorn main:app --reload",
+    "build": "npm run build:frontend && npm run build:backend && npm run build:analytics",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "build:analytics": "cd analytics && python -m pip install -r requirements.txt",
+    "test": "npm run test:frontend && npm run test:backend && npm run test:e2e",
+    "test:frontend": "cd frontend && npm test",
+    "test:backend": "cd backend && npm test",
+    "test:e2e": "cd tests && npm run test:e2e",
+    "test:coverage": "npm run test:frontend -- --coverage && npm run test:backend -- --coverage",
+    "lint": "npm run lint:frontend && npm run lint:backend",
+    "lint:frontend": "cd frontend && npm run lint",
+    "lint:backend": "cd backend && npm run lint",
+    "lint:fix": "npm run lint:frontend -- --fix && npm run lint:backend -- --fix",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install && cd ../tests && npm install",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "deploy": "npm run build && docker-compose -f docker-compose.prod.yml up -d",
+    "migrate": "cd backend && npm run migrate",
+    "seed": "cd backend && npm run seed",
+    "start:prod": "docker-compose -f docker-compose.prod.yml up -d"
+  },
+  "keywords": [
+    "cron",
+    "scheduling",
+    "analytics",
+    "dashboard",
+    "collaboration",
+    "enterprise",
+    "react",
+    "graphql",
+    "machine-learning",
+    "predictive-analytics"
+  ],
+  "author": "Cron Dashboard Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0"
+  },
+  "dependencies": {},
+  "workspaces": [
+    "frontend",
+    "backend", 
+    "tests"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  }
+}
