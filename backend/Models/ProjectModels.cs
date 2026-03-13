@@ -189,3 +189,70 @@ public class SuggestionListResponse
     public int ImplementedCount { get; set; }
     public int TotalCount { get; set; }
 }
+
+/// <summary>
+/// Result of suggestion injection into cron job
+/// </summary>
+public class SuggestionInjectionResult
+{
+    public string SuggestionId { get; set; } = string.Empty;
+    public bool Success { get; set; }
+    public string? Message { get; set; }
+    public string? ErrorMessage { get; set; }
+    public DateTime InjectedAt { get; set; } = DateTime.UtcNow;
+    public string? JobId { get; set; }
+    public string? SessionId { get; set; }
+    public string Method { get; set; } = string.Empty;
+    public int EstimatedMinutes { get; set; }
+    public Dictionary<string, object> TrackingData { get; set; } = new();
+}
+
+/// <summary>
+/// Memory analysis patterns and insights
+/// </summary>
+public class MemoryAnalysis
+{
+    public string ProjectId { get; set; } = string.Empty;
+    public TimeSpan AnalysisPeriod { get; set; }
+    public DateTime GeneratedAt { get; set; } = DateTime.UtcNow;
+    public int CurrentContextSize { get; set; }
+    public int ActiveConstraintsCount { get; set; }
+    public int RecentLearningsCount { get; set; }
+    public List<string> ThinkingPatterns { get; set; } = new();
+    public List<string> KeyDecisions { get; set; } = new();
+    public List<string> DecisionPatterns { get; set; } = new();
+    public List<string> LearningTrends { get; set; } = new();
+    public string PrimaryFocus { get; set; } = string.Empty;
+    public double ContextualAwareness { get; set; }
+}
+
+/// <summary>
+/// Memory insight from AI agent analysis
+/// </summary>
+public class MemoryInsight
+{
+    public string Type { get; set; } = string.Empty; // learning, constraint, pattern, etc.
+    public string Category { get; set; } = string.Empty;
+    public string Description { get; set; } = string.Empty;
+    public double Confidence { get; set; }
+    public Dictionary<string, object> Details { get; set; } = new();
+    public DateTime DetectedAt { get; set; } = DateTime.UtcNow;
+}
+
+/// <summary>
+/// Suggestion implementation tracking status
+/// </summary>
+public class SuggestionImplementationStatus
+{
+    public string SuggestionId { get; set; } = string.Empty;
+    public string ProjectId { get; set; } = string.Empty;
+    public DateTime? InjectedAt { get; set; }
+    public DateTime? ExpectedDelivery { get; set; }
+    public string InjectionMethod { get; set; } = string.Empty;
+    public Dictionary<string, object> TrackingData { get; set; } = new();
+    public bool ImplementationDetected { get; set; } = false;
+    public DateTime? ImplementationStartedAt { get; set; }
+    public DateTime? ImplementationCompletedAt { get; set; }
+    public string? StatusNotes { get; set; }
+    public double ProgressPercentage { get; set; } = 0;
+}

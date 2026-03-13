@@ -9,6 +9,7 @@
 /data/.openclaw/workspace/cron-collaboration-dashboard/backend/obj/Debug/net10.0/CronCollaboration.Api.sourcelink.json
 /data/.openclaw/workspace/cron-collaboration-dashboard/backend/bin/Debug/net10.0/appsettings.Development.json
 /data/.openclaw/workspace/cron-collaboration-dashboard/backend/bin/Debug/net10.0/appsettings.json
+/data/.openclaw/workspace/cron-collaboration-dashboard/backend/bin/Debug/net10.0/cron-data.json
 /data/.openclaw/workspace/cron-collaboration-dashboard/backend/bin/Debug/net10.0/CronCollaboration.Api.staticwebassets.endpoints.json
 /data/.openclaw/workspace/cron-collaboration-dashboard/backend/bin/Debug/net10.0/CronCollaboration.Api
 /data/.openclaw/workspace/cron-collaboration-dashboard/backend/bin/Debug/net10.0/CronCollaboration.Api.deps.json

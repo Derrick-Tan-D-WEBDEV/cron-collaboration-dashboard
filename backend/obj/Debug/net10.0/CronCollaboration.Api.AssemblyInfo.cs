@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CronCollaboration.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0470d4921354ab77b1884a4ee9926933a1358787")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e787dadf39bcda160d641bb8288198647b4464c2")]
 [assembly: System.Reflection.AssemblyProductAttribute("CronCollaboration.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CronCollaboration.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

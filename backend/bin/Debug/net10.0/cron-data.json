@@ -1,0 +1,161 @@
+{
+  "jobs": [
+    {
+      "id": "559261a8-f5cd-4384-bfe0-a405aea22e23",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "Collaboration Platform - Phase 1 Development",
+      "enabled": true,
+      "createdAtMs": 1773329504200,
+      "updatedAtMs": 1773329504200,
+      "schedule": {
+        "everyMs": 7200000,
+        "kind": "every",
+        "anchorMs": 1773333600000
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Develop Phase 1 features for the Cron Collaboration Dashboard",
+        "model": "github-copilot/claude-sonnet-4"
+      },
+      "delivery": {
+        "channel": "telegram",
+        "mode": "announce",
+        "to": "-1003586799491"
+      },
+      "state": {
+        "nextRunAtMs": 1773333600000,
+        "runningAtMs": 1773333600006
+      }
+    },
+    {
+      "id": "123f7b62-a415-4f5c-b260-0292a0253986",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "FPS.SimulatorService - Continuous Improvement Cycle",
+      "enabled": true,
+      "createdAtMs": 1773286341338,
+      "updatedAtMs": 1773331275900,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 7200000,
+        "anchorMs": 1773338400000
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Execute FPS.SimulatorService ACCELERATED ARCHITECTURE IMPROVEMENT cycle",
+        "model": "github-copilot/claude-sonnet-4"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "-1003586799491"
+      },
+      "state": {
+        "nextRunAtMs": 1773337860035,
+        "lastRunAtMs": 1773330660035,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 615865,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "b211dbb4-ba08-41d3-adbd-588de1c65065",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "Collaboration Platform - Phase 3 Advanced Features",
+      "enabled": true,
+      "createdAtMs": 1773329533850,
+      "updatedAtMs": 1773329533850,
+      "schedule": {
+        "expr": "0 2 * * *",
+        "kind": "cron",
+        "tz": "Asia/Kuala_Lumpur"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Develop Phase 3 advanced features for the Cron Collaboration Dashboard",
+        "model": "github-copilot/claude-sonnet-4"
+      },
+      "delivery": {
+        "channel": "telegram",
+        "mode": "announce",
+        "to": "-1003586799491"
+      },
+      "state": {
+        "nextRunAtMs": 1773338400000
+      }
+    },
+    {
+      "id": "2f4ae195-3eb7-47fe-8ad5-6bdb5c1d9e3d",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "Collaboration Platform - Phase 2 Development",
+      "enabled": true,
+      "createdAtMs": 1773329519913,
+      "updatedAtMs": 1773329519913,
+      "schedule": {
+        "anchorMs": 1773340800000,
+        "everyMs": 7200000,
+        "kind": "every"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Develop Phase 2 features for the Cron Collaboration Dashboard",
+        "model": "github-copilot/claude-sonnet-4"
+      },
+      "delivery": {
+        "channel": "telegram",
+        "mode": "announce",
+        "to": "-1003586799491"
+      },
+      "state": {
+        "nextRunAtMs": 1773340800000
+      }
+    },
+    {
+      "id": "8975e81b-daef-4984-aabb-0f03a79f47ee",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "FPS Cron Monitor - Daily Health Check",
+      "enabled": true,
+      "createdAtMs": 1773325291173,
+      "updatedAtMs": 1773325291173,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * *",
+        "tz": "Asia/Kuala_Lumpur"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Monitor FPS cron job health and performance",
+        "model": "github-copilot/claude-sonnet-4"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "-1003586799491"
+      },
+      "state": {
+        "nextRunAtMs": 1773363600000
+      }
+    }
+  ],
+  "total": 5,
+  "offset": 0,
+  "limit": 5,
+  "hasMore": false,
+  "nextOffset": null
+}
