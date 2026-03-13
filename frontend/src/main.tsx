@@ -7,6 +7,12 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { HelmetProvider } from 'react-helmet-async'
 import { ErrorBoundary } from 'react-error-boundary'
 
+// PrimeReact CSS - order matters
+import 'primereact/resources/themes/lara-dark-blue/theme.css'
+import 'primereact/resources/primereact.min.css'
+import 'primeicons/primeicons.css'
+import 'primeflex/primeflex.css'
+
 import { apolloClient } from '@services/apollo'
 import { NotificationProvider } from '@services/notifications'
 import { WebSocketProvider } from '@services/websocket'

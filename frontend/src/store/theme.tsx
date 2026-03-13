@@ -1,3 +1,4 @@
+import React from 'react'
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { ThemeMode, ThemeConfig } from '@types/index'
